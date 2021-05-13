@@ -9,12 +9,22 @@
 /* Begin PBXBuildFile section */
 		0210F8F4264B8FEF00277278 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0210F8F3264B8FEF00277278 /* AppDelegate.swift */; };
 		0210F8F6264B8FEF00277278 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0210F8F5264B8FEF00277278 /* SceneDelegate.swift */; };
-		0210F8F8264B8FEF00277278 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0210F8F7264B8FEF00277278 /* ViewController.swift */; };
-		0210F8FB264B8FEF00277278 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0210F8F9264B8FEF00277278 /* Main.storyboard */; };
+		0210F8F8264B8FEF00277278 /* WheelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0210F8F7264B8FEF00277278 /* WheelViewController.swift */; };
 		0210F8FD264B8FF000277278 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0210F8FC264B8FF000277278 /* Assets.xcassets */; };
 		0210F900264B8FF000277278 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0210F8FE264B8FF000277278 /* LaunchScreen.storyboard */; };
 		0210F90B264B8FF100277278 /* WheelyCoolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0210F90A264B8FF100277278 /* WheelyCoolTests.swift */; };
 		0210F916264B8FF100277278 /* WheelyCoolUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0210F915264B8FF100277278 /* WheelyCoolUITests.swift */; };
+		0210F924264B916F00277278 /* WheelScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0210F923264B916F00277278 /* WheelScreen.swift */; };
+		0210F927264B96AE00277278 /* WheelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0210F926264B96AE00277278 /* WheelView.swift */; };
+		0210F929264B96E300277278 /* NameLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0210F928264B96E300277278 /* NameLabel.swift */; };
+		0210F92B264B971900277278 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0210F92A264B971900277278 /* Colors.swift */; };
+		0210F92F264BA4A200277278 /* SpinButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0210F92E264BA4A200277278 /* SpinButton.swift */; };
+		0210F931264BAA0A00277278 /* SetupScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0210F930264BAA0A00277278 /* SetupScreen.swift */; };
+		0210F933264BAA7F00277278 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0210F932264BAA7F00277278 /* SetupViewController.swift */; };
+		0245F787264BDB80007CE066 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0245F786264BDB80007CE066 /* ViewExtensions.swift */; };
+		0245F78A264BEC36007CE066 /* WheelChoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0245F789264BEC36007CE066 /* WheelChoice.swift */; };
+		0245F78F264D4927007CE066 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0245F78E264D4927007CE066 /* TextField.swift */; };
+		0245F791264D49EC007CE066 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0245F790264D49EC007CE066 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +48,7 @@
 		0210F8F0264B8FEF00277278 /* WheelyCool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WheelyCool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0210F8F3264B8FEF00277278 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0210F8F5264B8FEF00277278 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0210F8F7264B8FEF00277278 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0210F8FA264B8FEF00277278 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0210F8F7264B8FEF00277278 /* WheelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelViewController.swift; sourceTree = "<group>"; };
 		0210F8FC264B8FF000277278 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0210F8FF264B8FF000277278 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0210F901264B8FF000277278 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +58,17 @@
 		0210F911264B8FF100277278 /* WheelyCoolUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WheelyCoolUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0210F915264B8FF100277278 /* WheelyCoolUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelyCoolUITests.swift; sourceTree = "<group>"; };
 		0210F917264B8FF100277278 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0210F923264B916F00277278 /* WheelScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelScreen.swift; sourceTree = "<group>"; };
+		0210F926264B96AE00277278 /* WheelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelView.swift; sourceTree = "<group>"; };
+		0210F928264B96E300277278 /* NameLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameLabel.swift; sourceTree = "<group>"; };
+		0210F92A264B971900277278 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		0210F92E264BA4A200277278 /* SpinButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinButton.swift; sourceTree = "<group>"; };
+		0210F930264BAA0A00277278 /* SetupScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupScreen.swift; sourceTree = "<group>"; };
+		0210F932264BAA7F00277278 /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
+		0245F786264BDB80007CE066 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
+		0245F789264BEC36007CE066 /* WheelChoice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelChoice.swift; sourceTree = "<group>"; };
+		0245F78E264D4927007CE066 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		0245F790264D49EC007CE066 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +119,14 @@
 		0210F8F2264B8FEF00277278 /* WheelyCool */ = {
 			isa = PBXGroup;
 			children = (
+				0245F78B264BEE96007CE066 /* UI */,
+				0245F788264BEC1C007CE066 /* Model */,
 				0210F8F3264B8FEF00277278 /* AppDelegate.swift */,
 				0210F8F5264B8FEF00277278 /* SceneDelegate.swift */,
-				0210F8F7264B8FEF00277278 /* ViewController.swift */,
-				0210F8F9264B8FEF00277278 /* Main.storyboard */,
 				0210F8FC264B8FF000277278 /* Assets.xcassets */,
 				0210F8FE264B8FF000277278 /* LaunchScreen.storyboard */,
 				0210F901264B8FF000277278 /* Info.plist */,
+				0245F790264D49EC007CE066 /* Constants.swift */,
 			);
 			path = WheelyCool;
 			sourceTree = "<group>";
@@ -126,6 +147,47 @@
 				0210F917264B8FF100277278 /* Info.plist */,
 			);
 			path = WheelyCoolUITests;
+			sourceTree = "<group>";
+		};
+		0210F92C264BA1B700277278 /* Wheel */ = {
+			isa = PBXGroup;
+			children = (
+				0210F8F7264B8FEF00277278 /* WheelViewController.swift */,
+				0210F923264B916F00277278 /* WheelScreen.swift */,
+				0210F926264B96AE00277278 /* WheelView.swift */,
+				0210F928264B96E300277278 /* NameLabel.swift */,
+				0210F92E264BA4A200277278 /* SpinButton.swift */,
+			);
+			path = Wheel;
+			sourceTree = "<group>";
+		};
+		0210F92D264BA1D100277278 /* Setup */ = {
+			isa = PBXGroup;
+			children = (
+				0210F930264BAA0A00277278 /* SetupScreen.swift */,
+				0210F932264BAA7F00277278 /* SetupViewController.swift */,
+				0245F78E264D4927007CE066 /* TextField.swift */,
+			);
+			path = Setup;
+			sourceTree = "<group>";
+		};
+		0245F788264BEC1C007CE066 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0210F92A264B971900277278 /* Colors.swift */,
+				0245F789264BEC36007CE066 /* WheelChoice.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0245F78B264BEE96007CE066 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				0245F786264BDB80007CE066 /* ViewExtensions.swift */,
+				0210F92D264BA1D100277278 /* Setup */,
+				0210F92C264BA1B700277278 /* Wheel */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +295,6 @@
 			files = (
 				0210F900264B8FF000277278 /* LaunchScreen.storyboard in Resources */,
 				0210F8FD264B8FF000277278 /* Assets.xcassets in Resources */,
-				0210F8FB264B8FEF00277278 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,8 +319,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0210F8F8264B8FEF00277278 /* ViewController.swift in Sources */,
+				0245F78A264BEC36007CE066 /* WheelChoice.swift in Sources */,
+				0245F787264BDB80007CE066 /* ViewExtensions.swift in Sources */,
+				0210F931264BAA0A00277278 /* SetupScreen.swift in Sources */,
+				0210F8F8264B8FEF00277278 /* WheelViewController.swift in Sources */,
+				0210F92F264BA4A200277278 /* SpinButton.swift in Sources */,
+				0245F78F264D4927007CE066 /* TextField.swift in Sources */,
+				0210F924264B916F00277278 /* WheelScreen.swift in Sources */,
+				0210F933264BAA7F00277278 /* SetupViewController.swift in Sources */,
+				0210F927264B96AE00277278 /* WheelView.swift in Sources */,
+				0210F929264B96E300277278 /* NameLabel.swift in Sources */,
 				0210F8F4264B8FEF00277278 /* AppDelegate.swift in Sources */,
+				0245F791264D49EC007CE066 /* Constants.swift in Sources */,
+				0210F92B264B971900277278 /* Colors.swift in Sources */,
 				0210F8F6264B8FEF00277278 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,14 +368,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		0210F8F9264B8FEF00277278 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0210F8FA264B8FEF00277278 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0210F8FE264B8FF000277278 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
