@@ -9,8 +9,8 @@ import UIKit
 
 class WheelViewController: UIViewController {
     
-    var wheelScreen: WheelScreen!
-    var wheelChoices: [WheelChoice] = []
+    private var wheelScreen: WheelScreen!
+    private var wheelChoices: [WheelChoice] = []
     
     init(wheelChoices: [WheelChoice]) {
         self.wheelChoices = wheelChoices
@@ -31,9 +31,9 @@ class WheelViewController: UIViewController {
         wheelScreen.spinButton.addTarget(self, action: #selector(spinAction), for: .touchUpInside)
         self.title = WHEEL_SCREEN_TITLE
     
-        self.wheelScreen.wheelView.onWinnerDetermined = { choice in
-            self.wheelScreen.setWinnerDisplay(winner: choice)
-            self.wheelScreen.setSpinButtonText(text: SPIN_TITLE)
+        self.wheelScreen.wheelView.onWinnerDetermined = { [weak self] choice in
+            self?.wheelScreen.setWinnerDisplay(winner: choice)
+            self?.wheelScreen.setSpinButtonText(text: SPIN_TITLE)
         }
     
     }

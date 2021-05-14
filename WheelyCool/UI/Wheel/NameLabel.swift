@@ -9,23 +9,23 @@ import UIKit
 
 class NameLabel: UILabel {
     
-    var name = "ISO Restricted"
-    var angle = CGFloat.pi / 2
+    private var name = "ISO Restricted"
+    private var angle = CGFloat.pi / 2
     
     init(frame: CGRect, name: String, angle: CGFloat, textColor: UIColor){
         super.init(frame: frame)
         self.name = name
         self.angle = angle
-        self.textAlignment = .right
         self.textColor = textColor
+        textAlignment = .right
         setAnchorPoint(anchorPoint: CGPoint(x:0, y:0.5), view: self)
     }
     
     override func draw(_ rect: CGRect) {
-        self.text = name
+        text = name
         let insets = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
-        self.drawText(in: rect.inset(by: insets))
-        self.transform = CGAffineTransform(rotationAngle: self.angle)
+        drawText(in: rect.inset(by: insets))
+        transform = CGAffineTransform(rotationAngle: self.angle)
     }
     
     required init?(coder: NSCoder) {

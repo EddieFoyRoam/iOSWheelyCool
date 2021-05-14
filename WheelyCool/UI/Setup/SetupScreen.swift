@@ -52,18 +52,18 @@ class SetupScreen: UIView {
 
 extension TextField {
     func setup(parent: UIView, fieldAbove: TextField?, colorPair: ColorPair, key: String) {
-        self.translatesAutoresizingMaskIntoConstraints = false
-        self.backgroundColor = colorPair.background
-        self.textColor = colorPair.text
-        self.text = UserDefaults.standard.string(forKey: key) ?? ""
-        self.applyBorder(color: UIColor.black)
+        translatesAutoresizingMaskIntoConstraints = false
+        backgroundColor = colorPair.background
+        textColor = colorPair.text
+        text = UserDefaults.standard.string(forKey: key) ?? ""
+        applyBorder(color: UIColor.black)
         parent.addSubview(self)
         let horizontalMargin: CGFloat = 20.0
         let topMargin: CGFloat = 10.0
         NSLayoutConstraint.activate([
-            self.leftAnchor.constraint(equalTo: parent.leftAnchor, constant: horizontalMargin),
-            self.rightAnchor.constraint(equalTo: parent.rightAnchor, constant:  -horizontalMargin),
-            self.topAnchor.constraint(equalTo: fieldAbove?.bottomAnchor ?? getParentTop(parent: parent), constant: topMargin)
+            leftAnchor.constraint(equalTo: parent.leftAnchor, constant: horizontalMargin),
+            rightAnchor.constraint(equalTo: parent.rightAnchor, constant:  -horizontalMargin),
+            topAnchor.constraint(equalTo: fieldAbove?.bottomAnchor ?? getParentTop(parent: parent), constant: topMargin)
         ])
     }
     

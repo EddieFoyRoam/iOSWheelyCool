@@ -11,7 +11,7 @@ extension UIView {
     
     func showToast(message : String, font: UIFont) {
         
-        let toastLabel = UILabel(frame: CGRect(x: self.frame.size.width/2 - 75, y: self.frame.size.height-100, width: 150, height: 35))
+        let toastLabel = UILabel(frame: CGRect(x: frame.size.width/2 - 75, y: frame.size.height-100, width: 150, height: 35))
         toastLabel.backgroundColor = UIColor.black.withAlphaComponent(0.6)
         toastLabel.textColor = UIColor.white
         toastLabel.font = font
@@ -29,9 +29,9 @@ extension UIView {
     }
     
     func applyBorder(color: UIColor) {
-        self.layer.cornerRadius = CORNER_RADIUS
-        self.layer.borderWidth = BORDER_WIDTH
-        self.layer.borderColor = color.cgColor
+        layer.cornerRadius = CORNER_RADIUS
+        layer.borderWidth = BORDER_WIDTH
+        layer.borderColor = color.cgColor
     }
     
 }

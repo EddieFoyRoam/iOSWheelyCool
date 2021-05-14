@@ -68,7 +68,7 @@ class WheelScreen: UIView {
     }
     
     func setWinnerDisplay(winner: WheelChoice) {
-        self.backgroundColor = winner.colors.background.withAlphaComponent(0.7)
+        backgroundColor = winner.colors.background.withAlphaComponent(0.7)
         winnerLabel.textColor = winner.colors.text
         winnerLabel.text = String(format: "%@ has been chosen!", winner.name)
     }

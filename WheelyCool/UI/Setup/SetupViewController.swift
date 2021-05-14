@@ -10,8 +10,7 @@ import UIKit
 
 class SetupViewController: UIViewController {
     
-    var wheelChoices: [WheelChoice] = []
-    
+    private var wheelChoices: [WheelChoice] = []
     private let setupScreen: SetupScreen = SetupScreen()
     private let defaults = UserDefaults.standard
 
@@ -22,7 +21,9 @@ class SetupViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupScreen.submitButton.addTarget(self, action: #selector(goToWheel), for: .touchUpInside)
-        self.title = SETUP_TITLE
+        title = SETUP_TITLE
+        navigationItem.setRightBarButton(UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(doneTapped)), animated: false)
+
     }
     
     @objc func goToWheel() {
@@ -52,6 +53,14 @@ class SetupViewController: UIViewController {
             }
             defaults.set(name, forKey: key)
         }
+    }
+    
+    @objc func doneTapped(){
+        setupScreen.inputField1.resignFirstResponder()
+        setupScreen.inputField2.resignFirstResponder()
+        setupScreen.inputField3.resignFirstResponder()
+        setupScreen.inputField4.resignFirstResponder()
+        setupScreen.inputField5.resignFirstResponder()
     }
     
 }
