@@ -29,10 +29,11 @@ class WheelViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         wheelScreen.spinButton.addTarget(self, action: #selector(spinAction), for: .touchUpInside)
-        self.title = "SPIN THE WHEEL"
+        self.title = WHEEL_SCREEN_TITLE
     
         self.wheelScreen.wheelView.onWinnerDetermined = { choice in
             self.wheelScreen.setWinnerDisplay(winner: choice)
+            self.wheelScreen.setSpinButtonText(text: SPIN_TITLE)
         }
     
     }
@@ -42,6 +43,7 @@ class WheelViewController: UIViewController {
             wheelScreen.showToast(message: "ISO Violation: please wait!", font: .systemFont(ofSize: 12.0))
         } else {
             wheelScreen.wheelView.rotate(rotationAmount: getRandomSpinAmount())
+            wheelScreen.setSpinButtonText(text: "")
         }
     }
     

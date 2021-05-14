@@ -13,7 +13,8 @@ class SpinButton: UIButton {
         super.init(frame: frame)
         translatesAutoresizingMaskIntoConstraints = false
         backgroundColor = BUTTON_COLOR
-        setTitle("Spin", for: [])
+        setTitle(SPIN_TITLE, for: [])
+        applyBorder(color: UIColor.white)
     }
     
     required init?(coder aDecoder: NSCoder) {

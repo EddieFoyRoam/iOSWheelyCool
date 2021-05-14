@@ -9,6 +9,7 @@ import UIKit
 
 class SetupScreen: UIView {
     
+    private let defaults = UserDefaults.standard
     let submitButton = UIButton()
     //TODO make them into a list
     let inputField1 = TextField()
@@ -21,11 +22,11 @@ class SetupScreen: UIView {
         super.init(frame: frame)
         backgroundColor = .lightGray
         setupSubmitButton()
-        inputField1.setup(parent: self, fieldAbove: nil, colorPair: colorArray[0])
-        inputField2.setup(parent: self, fieldAbove: inputField1, colorPair: colorArray[1])
-        inputField3.setup(parent: self, fieldAbove: inputField2, colorPair: colorArray[2])
-        inputField4.setup(parent: self, fieldAbove: inputField3, colorPair: colorArray[3])
-        inputField5.setup(parent: self, fieldAbove: inputField4, colorPair: colorArray[4])
+        inputField1.setup(parent: self, fieldAbove: nil, colorPair: colorArray[0], key: defaultsKeys.choice1)
+        inputField2.setup(parent: self, fieldAbove: inputField1, colorPair: colorArray[1], key: defaultsKeys.choice2)
+        inputField3.setup(parent: self, fieldAbove: inputField2, colorPair: colorArray[2], key: defaultsKeys.choice3)
+        inputField4.setup(parent: self, fieldAbove: inputField3, colorPair: colorArray[3], key: defaultsKeys.choice4)
+        inputField5.setup(parent: self, fieldAbove: inputField4, colorPair: colorArray[4], key: defaultsKeys.choice5)
     }
     
     required init?(coder: NSCoder) {
@@ -34,7 +35,7 @@ class SetupScreen: UIView {
     
     private func setupSubmitButton() {
         let margin: CGFloat = 20.0
-        submitButton.setTitle("Done", for: [])
+        submitButton.setTitle(DONE_TITLE, for: [])
         submitButton.translatesAutoresizingMaskIntoConstraints = false
         submitButton.backgroundColor = BUTTON_COLOR
         addSubview(submitButton)
@@ -44,15 +45,18 @@ class SetupScreen: UIView {
             submitButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant:  -margin),
             submitButton.heightAnchor.constraint(equalToConstant: BUTTON_HEIGHT)
         ])
+        submitButton.applyBorder(color: UIColor.white)
     }
     
 }
 
-extension UITextField {
-    func setup(parent: UIView, fieldAbove: UITextField?, colorPair: ColorPair) {
+extension TextField {
+    func setup(parent: UIView, fieldAbove: TextField?, colorPair: ColorPair, key: String) {
         self.translatesAutoresizingMaskIntoConstraints = false
         self.backgroundColor = colorPair.background
         self.textColor = colorPair.text
+        self.text = UserDefaults.standard.string(forKey: key) ?? ""
+        self.applyBorder(color: UIColor.black)
         parent.addSubview(self)
         let horizontalMargin: CGFloat = 20.0
         let topMargin: CGFloat = 10.0

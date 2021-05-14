@@ -13,7 +13,8 @@ class SetupViewController: UIViewController {
     var wheelChoices: [WheelChoice] = []
     
     private let setupScreen: SetupScreen = SetupScreen()
-    
+    private let defaults = UserDefaults.standard
+
     override func loadView() {
         self.view = setupScreen
     }
@@ -21,7 +22,7 @@ class SetupViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupScreen.submitButton.addTarget(self, action: #selector(goToWheel), for: .touchUpInside)
-        self.title = "Add Wheel Choices"
+        self.title = SETUP_TITLE
     }
     
     @objc func goToWheel() {
@@ -35,18 +36,21 @@ class SetupViewController: UIViewController {
     
     func populateNames() {
         wheelChoices.removeAll()
-        addNameFromField(field: setupScreen.inputField1)
-        addNameFromField(field: setupScreen.inputField2)
-        addNameFromField(field: setupScreen.inputField3)
-        addNameFromField(field: setupScreen.inputField4)
-        addNameFromField(field: setupScreen.inputField5)
+        addNameFromField(field: setupScreen.inputField1, key: defaultsKeys.choice1)
+        addNameFromField(field: setupScreen.inputField2, key: defaultsKeys.choice2)
+        addNameFromField(field: setupScreen.inputField3, key: defaultsKeys.choice3)
+        addNameFromField(field: setupScreen.inputField4, key: defaultsKeys.choice4)
+        addNameFromField(field: setupScreen.inputField5, key: defaultsKeys.choice5)
     }
     
-    func addNameFromField(field: UITextField) {
-        if let name = field.text, name.isEmpty == false {
-            wheelChoices.append(
-                WheelChoice(name: name, colors: ColorPair(background: field.backgroundColor ?? .black, text: field.textColor ?? .white))
-            )
+    func addNameFromField(field: UITextField, key: String) {
+        if let name = field.text {
+            if(name.isEmpty == false) {
+                wheelChoices.append(
+                    WheelChoice(name: name, colors: ColorPair(background: field.backgroundColor ?? .black, text: field.textColor ?? .white))
+                )
+            }
+            defaults.set(name, forKey: key)
         }
     }
     

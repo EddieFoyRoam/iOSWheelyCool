@@ -15,7 +15,7 @@ class WheelScreen: UIView {
     
     init(frame: CGRect, wheelChoices: [WheelChoice]) {
         super.init(frame: frame)
-        backgroundColor = .white
+        backgroundColor = .lightGray
 
         setDefaultWinnerLabel()
         wheelView = WheelView(frame: frame, wheelChoices: wheelChoices)
@@ -58,9 +58,13 @@ class WheelScreen: UIView {
         let arrowSymbolConfiguration = UIImage.SymbolConfiguration(pointSize: 50, weight: .thin)
         let arrowImage = UIImage(systemName: "arrowtriangle.left.fill", withConfiguration: arrowSymbolConfiguration)
         let arrowView = UIImageView(image: arrowImage!)
-        arrowView.tintColor = UIColor.gray
+        arrowView.tintColor = UIColor.black
         arrowView.translatesAutoresizingMaskIntoConstraints = false
         return arrowView
+    }
+    
+    func setSpinButtonText(text: String) {
+        spinButton.setTitle(text, for: [])
     }
     
     func setWinnerDisplay(winner: WheelChoice) {

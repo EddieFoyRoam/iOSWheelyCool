@@ -24,7 +24,9 @@
 		0245F787264BDB80007CE066 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0245F786264BDB80007CE066 /* ViewExtensions.swift */; };
 		0245F78A264BEC36007CE066 /* WheelChoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0245F789264BEC36007CE066 /* WheelChoice.swift */; };
 		0245F78F264D4927007CE066 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0245F78E264D4927007CE066 /* TextField.swift */; };
-		0245F791264D49EC007CE066 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0245F790264D49EC007CE066 /* Constants.swift */; };
+		0245F791264D49EC007CE066 /* Dimens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0245F790264D49EC007CE066 /* Dimens.swift */; };
+		0245F793264D5191007CE066 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0245F792264D5191007CE066 /* Keys.swift */; };
+		026C604B264E00DA00A03178 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026C604A264E00DA00A03178 /* Strings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +70,9 @@
 		0245F786264BDB80007CE066 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		0245F789264BEC36007CE066 /* WheelChoice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelChoice.swift; sourceTree = "<group>"; };
 		0245F78E264D4927007CE066 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
-		0245F790264D49EC007CE066 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0245F790264D49EC007CE066 /* Dimens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dimens.swift; sourceTree = "<group>"; };
+		0245F792264D5191007CE066 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		026C604A264E00DA00A03178 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +123,7 @@
 		0210F8F2264B8FEF00277278 /* WheelyCool */ = {
 			isa = PBXGroup;
 			children = (
+				026C6049264E00C800A03178 /* Values */,
 				0245F78B264BEE96007CE066 /* UI */,
 				0245F788264BEC1C007CE066 /* Model */,
 				0210F8F3264B8FEF00277278 /* AppDelegate.swift */,
@@ -126,7 +131,6 @@
 				0210F8FC264B8FF000277278 /* Assets.xcassets */,
 				0210F8FE264B8FF000277278 /* LaunchScreen.storyboard */,
 				0210F901264B8FF000277278 /* Info.plist */,
-				0245F790264D49EC007CE066 /* Constants.swift */,
 			);
 			path = WheelyCool;
 			sourceTree = "<group>";
@@ -176,6 +180,7 @@
 			children = (
 				0210F92A264B971900277278 /* Colors.swift */,
 				0245F789264BEC36007CE066 /* WheelChoice.swift */,
+				0245F792264D5191007CE066 /* Keys.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -188,6 +193,15 @@
 				0210F92C264BA1B700277278 /* Wheel */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		026C6049264E00C800A03178 /* Values */ = {
+			isa = PBXGroup;
+			children = (
+				0245F790264D49EC007CE066 /* Dimens.swift */,
+				026C604A264E00DA00A03178 /* Strings.swift */,
+			);
+			path = Values;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,8 +335,10 @@
 			files = (
 				0245F78A264BEC36007CE066 /* WheelChoice.swift in Sources */,
 				0245F787264BDB80007CE066 /* ViewExtensions.swift in Sources */,
+				026C604B264E00DA00A03178 /* Strings.swift in Sources */,
 				0210F931264BAA0A00277278 /* SetupScreen.swift in Sources */,
 				0210F8F8264B8FEF00277278 /* WheelViewController.swift in Sources */,
+				0245F793264D5191007CE066 /* Keys.swift in Sources */,
 				0210F92F264BA4A200277278 /* SpinButton.swift in Sources */,
 				0245F78F264D4927007CE066 /* TextField.swift in Sources */,
 				0210F924264B916F00277278 /* WheelScreen.swift in Sources */,
@@ -330,7 +346,7 @@
 				0210F927264B96AE00277278 /* WheelView.swift in Sources */,
 				0210F929264B96E300277278 /* NameLabel.swift in Sources */,
 				0210F8F4264B8FEF00277278 /* AppDelegate.swift in Sources */,
-				0245F791264D49EC007CE066 /* Constants.swift in Sources */,
+				0245F791264D49EC007CE066 /* Dimens.swift in Sources */,
 				0210F92B264B971900277278 /* Colors.swift in Sources */,
 				0210F8F6264B8FEF00277278 /* SceneDelegate.swift in Sources */,
 			);

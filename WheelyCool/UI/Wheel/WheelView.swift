@@ -91,7 +91,6 @@ class WheelView: UIView {
     func determineWinner(winningValue: Double) {
         for wheelChoice in wheelChoices {
             if(winningValue >= wheelChoice.startValue && winningValue < wheelChoice.endValue) {
-                print(wheelChoice.name)
                 onWinnerDetermined?(wheelChoice)
                 return
             }

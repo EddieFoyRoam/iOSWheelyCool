@@ -28,4 +28,10 @@ extension UIView {
         })
     }
     
+    func applyBorder(color: UIColor) {
+        self.layer.cornerRadius = CORNER_RADIUS
+        self.layer.borderWidth = BORDER_WIDTH
+        self.layer.borderColor = color.cgColor
+    }
+    
 }
